@@ -1,3 +1,0 @@
-1. Khi nhập vào kết thuc có dấu cách/tab vẫn bị báo lỗi
-2. Chỉ ghi đè file mỗi lần nhập mới, chưa chèn thêm hoạc sửa file cũ( đồng nghĩa việc chưa có chức năng xóa nếu hết hàng)
-3. Chưa có chức năng undo mỗi lần nhập sai/nhầm thao tác muốn chọn
