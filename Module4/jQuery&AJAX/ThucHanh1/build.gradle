@@ -1,0 +1,75 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'com.codegym'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    junitVersion = '5.10.2'
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    // Servlet API - do container (Tomcat) cung cấp, dùng để tạo Controller và xử lý HTTP request/response
+    providedCompile 'javax.servlet:javax.servlet-api:4.0.1'
+
+    // Spring MVC - framework chính xử lý Controller, View, DispatcherServlet,...
+    implementation 'org.springframework:spring-webmvc:5.3.23'
+
+    // Thymeleaf - dùng để render view (HTML template engine)
+    implementation 'org.thymeleaf:thymeleaf-spring5:3.1.1.RELEASE'
+
+    // Thymeleaf Layout Dialect - hỗ trợ layout (thừa kế giao diện) trong Thymeleaf
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.1.0'
+
+    // Commons FileUpload - để xử lý file upload (MultipartFile)
+    implementation 'commons-fileupload:commons-fileupload:1.4'
+    // Commons IO - hỗ trợ thao tác file, stream, thư mục...
+    implementation 'commons-io:commons-io:2.11.0'
+
+    // JSTL - dùng nếu vẫn cần thẻ JSTL trong JSP (tuỳ chọn)
+   // implementation 'javax.servlet:jstl:1.2'
+
+    // Logger - thư viện ghi log, debug
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+
+    // MySQL JDBC Driver
+    implementation 'mysql:mysql-connector-java:8.0.30'
+
+    // Hibernate - ORM để thao tác database qua Entity
+    implementation 'org.hibernate:hibernate-core:5.6.10.Final'
+
+    // Spring Data JPA - hỗ trợ tương tác JPA dễ dàng (gọi Repository không cần code SQL)
+    implementation 'org.springframework.data:spring-data-jpa:2.7.0'
+
+    // JPA API - chuẩn JPA để tạo Entity, mapping bảng
+    implementation 'javax.persistence:javax.persistence-api:2.2'
+
+    // Spring AOP - xử lý các tác vụ xuyên suốt như logging, validate,...
+    implementation 'org.springframework:spring-aspects:5.3.20'
+
+    // Spring Transaction - hỗ trợ quản lý giao dịch (transactional)
+    implementation 'org.springframework:spring-tx:5.3.23'
+
+    // Jackson - chuyển đổi giữa Java Object và JSON (dùng trong API hoặc lưu file)
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.2'
+
+    // Validation API - hỗ trợ @NotNull, @Email, @Size... để validate dữ liệu
+    implementation 'javax.validation:validation-api:2.0.1.Final'
+}
+
+test {
+    useJUnitPlatform()
+}

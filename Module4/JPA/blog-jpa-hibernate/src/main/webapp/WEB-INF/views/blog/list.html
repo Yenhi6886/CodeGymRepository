@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh sách Blog</title>
+    <style> .active { font-weight: bold; } </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h1>Ứng dụng Blog</h1>
+<p><a th:href="@{/blogs/create}">Viết bài mới</a> | <a th:href="@{/categories}">Quản lý Danh mục</a></p>
+<p th:if="${message}" th:text="${message}" style="color: green;"></p>
+
+<div style="display: flex;">
+    <div style="flex-grow: 3; padding-right: 20px;">
+        <h2 th:if="${categoryName}" th:text="'Các bài viết trong danh mục: ' + ${categoryName}"></h2>
+        <h2 th:unless="${categoryName}">Tất cả bài viết</h2>
+
+        <table border="1">
+            <thead>
+            <tr>
+                <th>Tiêu đề</th>
+                <th>Tóm tắt</th>
+                <th>Danh mục</th>
+                <th>Ngày tạo</th>
+                <th>Hành động</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="blog : ${blogsPage.content}">
+                <td th:text="${blog.title}"></td>
+                <td th:text="${blog.summary}"></td>
+                <td th:text="${blog.category?.name}"></td>
+                <td th:text="${#temporals.format(blog.creationDate, 'dd/MM/yyyy')}"></td>
+                <td>
+                    <a th:href="@{/blogs/view/{id}(id=${blog.id})}">Xem</a> |
+                    <a th:href="@{/blogs/edit/{id}(id=${blog.id})}">Sửa</a> |
+                    <a th:href="@{/blogs/delete/{id}(id=${blog.id})}">Xóa</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <button id="loadMoreBtn" style="margin-top: 20px;">Tải thêm</button>
+        <div id="loadMoreResult"></div>
+
+        <script>
+        var currentPage = /*[[${blogsPage.number}]]*/ 0;
+        var totalPages = /*[[${blogsPage.totalPages}]]*/ 1;
+        $(document).ready(function() {
+            $('#loadMoreBtn').click(function() {
+                if (currentPage + 1 < totalPages) {
+                    $.ajax({
+                        url: '/blogs/load-more',
+                        type: 'GET',
+                        data: { page: currentPage + 1 },
+                        success: function(data) {
+                            $('#loadMoreResult').append(data);
+                            currentPage++;
+                            if (currentPage + 1 >= totalPages) {
+                                $('#loadMoreBtn').hide();
+                            }
+                        }
+                    });
+                } else {
+                    $('#loadMoreBtn').hide();
+                }
+            });
+        });
+        </script>
+    </div>
+
+    <div style="flex-grow: 1;">
+        <h3>Tìm kiếm</h3>
+        <form action="/blogs" method="get">
+            <input type="text" name="search" placeholder="Tìm theo tiêu đề..." th:value="${search}">
+            <button type="submit">Tìm</button>
+        </form>
+        <hr>
+        <h3>Danh mục</h3>
+        <ul>
+            <li><a th:href="@{/blogs}">Tất cả bài viết</a></li>
+            <li th:each="cat : ${categories}">
+                <a th:href="@{/blogs/category/{id}(id=${cat.id})}" th:text="${cat.name}"></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Search Form -->
+<form id="searchForm" style="margin-bottom: 20px;">
+    <input type="text" id="searchInput" name="search" placeholder="Tìm kiếm bài viết..." th:value="${search}">
+    <button type="submit">Tìm kiếm</button>
+</form>
+
+<!-- Search Results -->
+<div id="searchResults">
+    <!-- Kết quả tìm kiếm sẽ được hiển thị ở đây -->
+</div>
+
+<script>
+$(document).ready(function() {
+    $('#searchForm').submit(function(e) {
+        e.preventDefault();
+        var searchValue = $('#searchInput').val();
+        $.ajax({
+            url: '/blogs/search',
+            type: 'GET',
+            data: { search: searchValue },
+            success: function(data) {
+                $('#searchResults').html(data);
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

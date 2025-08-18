@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BaiTapSo1/BaiTapSo1.iml" filepath="$PROJECT_DIR$/BaiTapSo1/BaiTapSo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaiTapSo2/BaiTapSo2.iml" filepath="$PROJECT_DIR$/BaiTapSo2/BaiTapSo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IO-TextFile.iml" filepath="$PROJECT_DIR$/IO-TextFile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThucHanh1/ThucHanh1.iml" filepath="$PROJECT_DIR$/ThucHanh1/ThucHanh1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ThucHanh2/ThucHanh2.iml" filepath="$PROJECT_DIR$/ThucHanh2/ThucHanh2.iml" />
+    </modules>
+  </component>
+</project>

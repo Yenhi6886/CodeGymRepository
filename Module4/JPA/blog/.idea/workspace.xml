@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9c665b08-47ea-49d2-92c8-4e6e310f6152" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai1/demo.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai11_MVC/demo/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module3/Bai11_MVC/demo/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai12_JDBC_CRUD/user-manager/src/main/java/com/example/usermanager/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module3/Bai12_JDBC_CRUD/user-manager/src/main/java/com/example/usermanager/controller/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai12_JDBC_CRUD/user-manager/src/main/java/com/example/usermanager/dao/IUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module3/Bai12_JDBC_CRUD/user-manager/src/main/java/com/example/usermanager/dao/IUserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai12_JDBC_CRUD/user-manager/src/main/java/com/example/usermanager/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module3/Bai12_JDBC_CRUD/user-manager/src/main/java/com/example/usermanager/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai2/quanlybanhang.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai3/thaotaccsdlbanhang.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai3/themdulieuquanlysinhvien.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai3/truyvandulieuquanlysinhvien.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai4/baitapcachamthongdung.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai4/thuchanhsudungcacham.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai5/baitapview_index_procedure.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai5/thuchanhview_chimuc_procedure.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai6/Baitap2/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai6/Baitap3/Style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai6/Baitap3/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai6/Baitapt1/Styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai6/Baitapt1/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai6/Thuchanh/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3/Bai6/Thuchanh/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="30Emg2q7bZ9c622c4R0Tjz2cNDL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9c665b08-47ea-49d2-92c8-4e6e310f6152" name="Changes" comment="" />
+      <created>1753201218302</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753201218302</updated>
+      <workItem from="1753201219505" duration="58000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

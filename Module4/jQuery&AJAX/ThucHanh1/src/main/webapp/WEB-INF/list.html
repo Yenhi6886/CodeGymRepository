@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore labore maxime neque soluta voluptatum! Aperiam architecto dolor, est iste magni molestias suscipit tempore temporibus? Dignissimos dolorum perferendis rem. Fugiat, fugit!</p>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#hide").click(function(){
+      $("p").hide();
+    });
+    $("#show").click(function(){
+      $("p").show();
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-5">
+            <img th:src="@{'/images/' + ${product.id} + '.jpg'}" class="img-fluid" />
+        </div>
+        <div class="col-md-7">
+            <h4 th:text="${product.name}"></h4>
+            <p>Mã SP: <span class="text-success" th:text="${product.id}"></span></p>
+            <p>Giá cũ: <del th:text="${product.price + 50000} + ' đ'"></del></p>
+            <p class="text-danger">Giá mới: <strong th:text="${product.price} + ' đ'"></strong></p>
+            <a class="btn btn-danger" th:href="@{'/add/' + ${product.id}(action='show')}">MUA NGAY</a>
+        </div>
+    </div>
+</div>

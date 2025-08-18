@@ -1,0 +1,330 @@
+/* === Base Reset === */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9f9f9;
+    color: #111;
+}
+
+/* === Wrapper === */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* === Sidebar === */
+.sidebar {
+    background: #111;
+    color: white;
+    width: 240px;
+    height: 100vh;
+    padding: 90px 20px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+.sidebar h4 {
+    font-size: 15px;
+    margin-bottom: 24px;
+    color: #ccc;
+    text-transform: uppercase;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: all 0.2s ease;
+}
+
+.sidebar a:hover {
+    background: #f1f1f1;
+    color: #111;
+    transform: translateX(4px);
+}
+
+/* === Main Content === */
+.main-content {
+    margin-left: 240px;
+    padding: 100px 40px 40px;
+    background: #f9f9f9;
+    flex-grow: 1;
+}
+
+.main-content h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* === Card Grid === */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    border: 1px solid #e5e5e5;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+}
+
+.card h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* === Image Sections === */
+.sections {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.section {
+    flex: 1 1 280px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    text-align: center;
+    padding: 16px;
+    transition: 0.3s ease;
+}
+
+.section img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.section div {
+    margin-top: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #111;
+}
+
+.section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* === Footer === */
+footer {
+    background: #fff;
+    color: #888;
+    text-align: center;
+    padding: 16px;
+    margin-left: 240px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 13px;
+    z-index: 10;
+    position: relative;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    .main-content,
+    footer {
+        margin-left: 0;
+        padding: 100px 20px 40px;
+    }
+}
+
+/* === Navbar === */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 1000;
+}
+
+nav h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: #111;
+}
+
+nav i.fa-mortar-board {
+    font-size: 20px;
+    margin-right: 12px;
+    color: #111;
+}
+
+/* === Navbar Admin Dropdown Custom === */
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    align-items: center;
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    line-height: 60px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Nút Admin */
+nav ul li > a {
+    padding: 0px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: #f8f8f8;
+    color: #111;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+nav ul li > a:hover {
+    background: #ececec;
+}
+
+/* Dropdown */
+nav ul li ul.dropdown {
+    position: absolute;
+    top: 60px; /* sát ngay dưới navbar */
+    right: 0;
+    margin-top: 0;
+    min-width: 140px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    padding: 4px 0;
+    display: none;
+    z-index: 1001;
+}
+
+
+/*nav ul li:hover ul.dropdown {*/
+/*    display: block;*/
+/*}*/
+
+nav ul li ul.dropdown li {
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+
+/* Nút logout */
+nav ul li ul.dropdown input[type="submit"] {
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 14px;
+    color: #111;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    border-radius: 6px;
+}
+
+nav ul li ul.dropdown input[type="submit"]:hover {
+    background-color: #f2f2f2;
+    color: #000;
+}
+
+/* Xoá xung đột hover toàn bộ */
+/*nav ul:hover li a,*/
+/*nav ul:hover li a:hover,*/
+/*nav ul:hover li input:hover {*/
+/*    background-color: initial;*/
+/*    color: inherit;*/
+/*}*/
+
+/* === Icon === */
+.fa-mortar-board {
+    color: white;
+    font-size: 50px !important;
+    margin-left: 5.3vw;
+    margin-right: 7vw;
+    vertical-align: middle;
+}
+
+.fa-user-circle {
+    font-size: 18px;
+    margin-right: 6px;
+}
+
+/* ==== Dropdown Item Style như ảnh ==== */
+nav ul li ul.dropdown a.logout-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+nav ul li ul.dropdown a.logout-link:hover {
+    background-color: #f2f2f2;
+    color: #111;
+}
+
+nav ul li ul.dropdown i.fas {
+    font-size: 14px;
+}
+
+/*.dropdown-toggle::after {*/
+/*    display: inline-block;*/
+/*    margin-left: .255em;*/
+/*    vertical-align: .255em;*/
+/*    content: "";*/
+/*    border-top: .3em solid;*/
+/*    border-right: .3em solid transparent;*/
+/*    border-bottom: 0;*/
+/*    border-left: .3em solid transparent;*/
+/*}*/

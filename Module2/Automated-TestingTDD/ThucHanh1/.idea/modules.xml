@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Automated-TestingTDD.iml" filepath="$PROJECT_DIR$/Automated-TestingTDD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/absolute-number-calculator/absolute-number-calculator.iml" filepath="$PROJECT_DIR$/absolute-number-calculator/absolute-number-calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apj-2023-junit-calculator/apj-2023-junit-calculator.iml" filepath="$PROJECT_DIR$/apj-2023-junit-calculator/apj-2023-junit-calculator.iml" />
+    </modules>
+  </component>
+</project>
